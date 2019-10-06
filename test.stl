@@ -1,0 +1,38 @@
+program test
+
+	declare a,b;
+
+	function f1 (in x)
+		declare c,d;
+
+		
+		function f2(inout y)
+			declare e;
+
+			function f3(inandout e)
+				e:=e+1;
+				print e; //prepei na einai 4
+				return e;
+			endfunction
+
+			print y; // prepei na einai 3
+			e:=f3(inandout y);
+			print e; //prepei na einai 4
+			return e;
+
+		endfunction
+
+		d:=3;
+		print x; 	//prepei na einai -1
+		c:=f2(inout d);
+		print c; //prepei na einai 4
+		return c;
+
+	endfunction
+		
+	
+	b:=-1;
+	a:=-f1(in b);
+	print a; //prepei na enai -4
+
+endprogram
