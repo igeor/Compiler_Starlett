@@ -1,5 +1,4 @@
-# Ioannis Georvasilis AM:2656, username: cse42656
-# Andreas Sideras AM:2813, username: cse42813
+
 
 import sys
 from difflib import SequenceMatcher
